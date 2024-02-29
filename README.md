@@ -10,12 +10,12 @@ phone <- WorldPhones
 phone
 #netvarkingi, nes eilutėse apie kelis kintamuosius informacija.
 ```
-Sukurkite failo datasets :: W orldP hones kopiją ir sutvarkykite eilučių pavadinimus.
+2. Sukurkite failo datasets :: WorldPhones kopiją ir sutvarkykite eilučių pavadinimus.
 ```
 phone = as.data.frame(WorldPhones)
 phone_copy = tibble :: rownames_to_column(phone, "Years")
 ```
-Sukurkite naują kintamąjį T elephones - regiono telefonų skaičius (žr. pivot_longer)
+3. Sukurkite naują kintamąjį Telephones - regiono telefonų skaičius (žr. pivot_longer)
 ir sutvarkykite duomenų failą.
 
 ```
