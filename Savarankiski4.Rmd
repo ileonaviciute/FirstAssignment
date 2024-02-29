@@ -1,0 +1,20 @@
+---
+title: "Savarankiski4"
+output: html_document
+date: "`r Sys.Date()`"
+---
+```{r pirma, pirma dalis}
+phone <- WorldPhones
+phone
+#netvarkingi, nes eilutėse apie kelis kintamuosius informacija.
+```
+```{r pirma, antra dalis}
+phone = as.data.frame(WorldPhones)
+phone_copy = tibble :: rownames_to_column(phone, "Years")
+
+```
+```{r pirma, trečia dalis}
+phone_copy %>% pivot_longer(c("N.Amer", "Europe", "Asia", "S.Amer", "Oceania",
+                              "Africa", "Mid.Amer"), names_to = "Continent",
+                            values_to = "Telephones")
+```
